@@ -5,6 +5,15 @@ namespace Models
     private int _x = 1;
     private int _y = 1;
   
+    public int getPlayerX()
+    {
+      return _x;
+    }
+    public int getPlayerY()
+    {
+      return _y;
+    }
+
     public void MovePlayer(string direction)
     {
       if(direction == "up")
