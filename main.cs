@@ -5,14 +5,26 @@ public class Program
 {
   public static void Main()
   {
+    Console.Clear();
     Game newGame = new Game();
+    Player newPlayer = new Player();
     newGame.CreateGame();
     int[][] gameBoard = newGame.GetGame();
-    string gameBoardString = "";
-    for(int i = 0; i < gameBoard.Length; i++)
+
+    for (int i = 0; ; i++)
     {
-      gameBoardString += (String.Join("", gameBoard[i]) + "\n");
+      Console.SetCursorPosition(Console.WindowLeft, Console.WindowTop);
+      Console.Write(GetGameBoardString(gameBoard));
     }
-    Console.WriteLine(gameBoardString);
+  }
+
+  public static string GetGameBoardString(int[][] game)
+  {
+    string gameBoardString = "";
+    for(int i = 0; i < game.Length; i++)
+    {
+      gameBoardString += (String.Join("", game[i]) + "\n");
+    }
+    return gameBoardString;
   }
 }
