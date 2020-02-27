@@ -14,16 +14,6 @@ namespace Models
       _game[5] = new int[] { 1,1,1,1,1,1 };
     }
 
-    // public void ResetBoard()
-    // {
-    //   _game[0] = { 1,1,1,1,1,1 };
-    //   _game[1] = { 1,0,0,0,0,1 };
-    //   _game[2] = { 1,0,0,0,0,1 };
-    //   _game[3] = { 1,0,0,0,0,1 };
-    //   _game[4] = { 1,0,0,0,0,1 };
-    //   _game[5] = { 1,1,1,1,1,1 };
-    // }
-
     public int[][] GetGame()
     {
       return _game;
