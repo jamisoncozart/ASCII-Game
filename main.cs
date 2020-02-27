@@ -19,16 +19,13 @@ public class Program
         ConsoleKeyInfo keyInfo = Console.ReadKey(true);
         if (keyInfo.Key == ConsoleKey.RightArrow) newPlayer.MovePlayer("right");
         else if (keyInfo.Key == ConsoleKey.LeftArrow) newPlayer.MovePlayer("left");
+        else if (keyInfo.Key == ConsoleKey.UpArrow) newPlayer.MovePlayer("up");
+        else if (keyInfo.Key == ConsoleKey.DownArrow) newPlayer.MovePlayer("down");
         else break;
       }
       Console.SetCursorPosition(Console.WindowLeft, Console.WindowTop);
       Console.Write(GetGameBoardString(gameBoard)); 
     }
-    // for (int i = 0; ; i++)
-    // {
-    //   Console.SetCursorPosition(Console.WindowLeft, Console.WindowTop);
-    //   Console.Write(GetGameBoardString(gameBoard));
-    // }
   }
 
   public static string GetGameBoardString(int[][] gameBoard)
@@ -45,11 +42,5 @@ public class Program
       gameBoardString += (String.Join("", gameBoard[i]) + "\n");
     }
     return gameBoardString;
-  }
-
-  public static void movePlayerController()
-  {
-    //move player based on key strokes
-
   }
 }
